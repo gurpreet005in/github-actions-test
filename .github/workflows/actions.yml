@@ -12,6 +12,9 @@ jobs:
     run-github-actions:
        runs-on: ubuntu-latest
        steps:
+          - name: payload
+            run: |
+              echo "${{github.event.client_payload.remarks}}"            
           - name: List of files
             run: |
               pwd
